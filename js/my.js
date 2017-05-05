@@ -26,12 +26,12 @@ $(function() {
     $(" span.fade").addClass("fadesin3");
 
     var _top;
-    var top1 = $("#section2").offset().top-30;
-    var top2 = $("#section3").offset().top-30;
-    var top3 = $("#section4").offset().top-30;
-    var top4 = $("#section5").offset().top-30;
-    var top5 = $("#section6").offset().top-30;
-    var top6 = $("#section7").offset().top-30;
+    var top1 = $("#section2").offset().top-200;
+    var top2 = $("#section3").offset().top-200;
+    var top3 = $("#section4").offset().top-200;
+    var top4 = $("#section5").offset().top-200;
+    var top5 = $("#section6").offset().top-200;
+    var top6 = $("#section7").offset().top-200;
     var tops = [top1,top2,top3,top4,top5,top6];
     $(window).resize();
 
@@ -39,7 +39,7 @@ $(function() {
     $("#top").click(function () {
         $('html,body').stop().animate({
             scrollTop: 0
-        }, 700);
+        }, 1000);
     });
     showScroll();
     var min_height = document.documentElement.clientHeight /2;
@@ -54,10 +54,6 @@ $(function() {
         var index = $(this).index();//获取序号
         $(".nav-ul li").eq(index).addClass("active").siblings().removeClass("active");
         $(".nav-xs-ul li").eq(index).addClass("active").siblings().removeClass("active");
-    });
-    //关于我
-    $("#abMe").bind("click", function () {
-        $(".nav-ul li:nth-child(1)").click();
     });
     //我的作品
     $("#mypro").bind("click", function () {
